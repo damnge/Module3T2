@@ -1,0 +1,213 @@
+/* importing google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* first I've customized bootstrap components for my own needs */
+
+/* customizing navbar */
+
+.container {
+  max-width: 1080px;
+}
+
+.bg-light {
+  background-color: #4f5d75 !important;
+}
+
+/* Customizing colors of primary buttons  */
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ef8354;
+  --bs-btn-border-color: #ef8354;
+  --bs-btn-hover-color: #4f5d75;
+  --bs-btn-hover-bg: #ffa781;
+  --bs-btn-hover-border-color: #ffa781;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #4f5d75;
+  --bs-btn-active-bg: #ffa781;
+  --bs-btn-active-border-color: #ffa781;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #4f5d75;
+  --bs-btn-disabled-bg: #ffa781;
+  --bs-btn-disabled-border-color: #ffa781;
+}
+
+/* customizing button link in nav */
+
+.btn-link {
+  --bs-btn-font-weight: 400;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #ef8354;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: #ef8354;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-color: #6c757d;
+  --bs-btn-disabled-border-color: transparent;
+  --bs-btn-box-shadow: none;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  text-decoration: none;
+}
+
+.btn-outline-light {
+  --bs-btn-color: #f8f9fa;
+  --bs-btn-border-color: #f8f9fa;
+  --bs-btn-hover-color: #ef8354;
+  --bs-btn-hover-bg: #f8f9fa;
+  --bs-btn-hover-border-color: #f8f9fa;
+  --bs-btn-focus-shadow-rgb: 248, 249, 250;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #f8f9fa;
+  --bs-btn-active-border-color: #f8f9fa;
+  --bs-btn-active-shadow: inset 0 3px 5pxrgba (0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #f8f9fa;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #f8f9fa;
+  --bs-gradient: none;
+}
+/* Customizing color of background footer */
+
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: #2d3142 !important;
+}
+
+/* Then I've started adding my own code creating main section of the body with customized bootstrap cards */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #2d3142;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Lato", sans-serif;
+}
+
+/* about me section */
+
+.about__me {
+  margin: 100px auto;
+  max-width: 1080px;
+}
+
+.about__title {
+  font-size: 50px;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+}
+/* using flexbox for spacing evenly around */
+
+.photo__text__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.right__block {
+  max-width: 600px;
+  margin-left: 50px;
+}
+
+.left__block img {
+  border-radius: 10px;
+  max-width: 300px;
+}
+/* blog section with customized bootstrap cards in it */
+
+.blog__section__wrapper {
+  margin: 150px 0;
+}
+.blog__section {
+  margin: 70px auto;
+  max-width: 1080px;
+}
+.section__title {
+  margin: 20px 35px;
+}
+
+.section__title h1 {
+  font-weight: 600;
+}
+
+/* card wrapper build using flexbox */
+
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* customized card component */
+
+.card {
+  margin: 20px;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.142);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-weight: bold;
+}
+/* Form wrapper to make a bootstrap sing up form component smaller and center in the middle */
+
+.form__wrapper {
+  max-width: 500px;
+  margin: 100px auto;
+  border-radius: 25px;
+  padding: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.142);
+}
+
+/* Responsive properties for mobile and tablet screens */
+
+@media screen and (max-width: 1000px) {
+  .about__title {
+    font-size: 40px;
+  }
+  .photo__text__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left__block {
+    margin-bottom: 50px;
+  }
+
+  .right__block {
+    max-width: 350px;
+  }
+  .blog__section__wrapper {
+    margin: 100px 0;
+  }
+  .card__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section__title {
+    text-align: center;
+    margin: 30px 0;
+  }
+}
